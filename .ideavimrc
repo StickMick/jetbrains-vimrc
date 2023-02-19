@@ -1,0 +1,103 @@
+" ============= "
+" Text Rendering
+" ============= "
+" Always try to show a paragraph’s last line.
+set display+=lastline:
+
+" Use an encoding that supports unicode.
+set encoding=utf-8
+
+" Avoid wrapping a line in the middle of a word.
+set linebreak
+
+" The number of screen lines to keep above and below the cursor.
+set scrolloff=1
+
+" The number of screen columns to keep to the left and right of the cursor.
+set sidescrolloff=5
+
+" Enable syntax highlighting.
+syntax enable
+
+" Enable line wrapping.
+set wrap
+
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" ============= "
+" Indentation
+" ============= "
+" New lines inherit the indentation of previous lines.
+set autoindent
+
+" Convert tabs to spaces.
+set expandtab
+
+" When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
+set shiftround
+
+" When shifting, indent using four spaces.
+set shiftwidth=4
+
+" Insert “tabstop” number of spaces when the “tab” key is pressed.
+set smarttab
+
+" Indent using four spaces.
+set tabstop=4
+
+
+" ============= "
+" Search
+" ============= "
+" Do incremental searching.
+set incsearch
+
+" Enable search highlighting.
+set hlsearch
+
+" Ignore case when searching.
+set ignorecase
+
+" Incremental search that shows partial matches.
+set incsearch
+
+" Automatically switch search to case-sensitive when search query contains an uppercase letter.
+set smartcase
+
+
+
+" ============= "
+" UI
+" ============= "
+" Always show cursor position.
+set ruler
+
+" Show line numbers on the sidebar.
+set number
+
+" Show line number on the current line and relative numbers on all other lines.
+set relativenumber
+
+" Flash the screen instead of beeping on errors.
+set visualbell
+
+
+
+
+" map leader to Space
+let mapleader = " "
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <leader>b <Action>(ToggleLineBreakpoint)
